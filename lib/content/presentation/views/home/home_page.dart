@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> with View<HomePageViewModel>, Ticke
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 0, vsync: this);
+    tabController = TabController(length: 1, vsync: this);
   }
 
   @override
@@ -58,9 +58,6 @@ class _HomePageState extends State<HomePage> with View<HomePageViewModel>, Ticke
                         ),
                       ),
                     ),
-                    ListView.builder(
-                        itemBuilder: (context, index) => PokemonTile(pokemon: state.items[index]),
-                        itemCount: state.items.length),
                   ],
                 );
               }),
